@@ -1,0 +1,105 @@
+.CreateTask {
+  background: var(--color-gray-600);
+  margin: 0 auto;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;   
+}
+
+.CreateTask textarea {
+   width: 638px;
+   height: 54px;
+   margin-top: -2rem;
+   font-weight: 400;
+   font-size: 16px;
+   color: var(--color-gray-300);
+   background: var(--color-gray-500);
+   border-radius: 8px;
+   padding: 16px;
+   resize: none;
+}
+
+textarea input {
+  color: var(--color-white);
+}
+
+button[type=submit] {
+  width: 90px;
+  height: 54px;
+  margin-left: 0.5rem;
+  margin-top: -2rem;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-gray-100);
+  background:var(--color-blue-dark);
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 6px;
+}
+
+
+
+button:hover {
+  background: var(--color-blue); 
+}
+
+
+.headerTasks {
+ 
+
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.headerTasks p {
+ font-size: 14px;
+ font-weight: bold;
+ color:var(--color-blue) ;
+}
+
+.headerTasks  span {
+ font-size: 14px;
+ font-weight: bold;
+ color: var(--color-purple-dark);
+
+}
+
+.headerContainer {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+   
+}
+
+.container {
+    width: 736px;
+    height: 72px;
+    margin: 12px auto;
+    background: var(--color-gray-500);
+    border-radius: 8px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container p {
+    max-width: 632px;
+    color: var(--color-gray-100);
+}
+
+
+
+
+
+
