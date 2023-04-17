@@ -1,0 +1,53 @@
+.taskbar {
+    margin-top: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.taskbar textarea {
+  width: 100%;
+  max-width: 638px;
+  height: 54px;
+  border-radius: 8px;
+  background: var(--color-gray-500);
+  resize: none;
+}
+
+.taskbar textarea::placeholder {
+  padding: 17px;
+
+  
+}
+
+.taskbar textarea:focus {
+    color: var(--color-gray-100);
+  }
+
+.taskbar button {
+    font-family: 'inter', sans-serif;
+    font-size: 14px;
+    line-height: 19.6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--color-gray-100);
+}
+
+.taskbar button {
+    width: 100%;
+    max-width: 90px;
+    padding: 16px;
+    border-radius: 8px;
+    background: var(--color-blue-dark);
+    color: var(--color-gray-100);
+    transition: background 0.2s;
+  }
+
+
+  .taskbar button:hover {
+    background: var(--color-blue);
+
+  }
