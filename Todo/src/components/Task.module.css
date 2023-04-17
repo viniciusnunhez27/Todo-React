@@ -1,0 +1,34 @@
+.taskInfo {
+    width: 100%;
+    max-width: 738px;
+    margin: 0px  auto;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-gray-500);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.taskInfo p {
+    max-width: 632px;
+    font-family: 'inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.6px;
+    color: var(--color-gray-100);
+}
+
+.taskInfo button {
+    background: transparent;
+    color: var(--color-gray-300);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.taskInfo button:hover {
+   color: var(--color-danger);
+
+}

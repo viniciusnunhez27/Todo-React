@@ -6,6 +6,7 @@ import Plus from "./assets/Plus.svg";
 import IconEmpty from './assets/Iconempty.svg'
 
 import "./global.css";
+import { Task } from "./components/Task";
 
 function App() {
   return (
@@ -35,7 +36,11 @@ function App() {
       </div>
      </div>
    </div>
+
+    <Task />
     </>
+
+
   );
 }
 
