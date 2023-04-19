@@ -11,6 +11,10 @@
     border-radius: 8px;
 }
 
+.taskInfo + .taskInfo {
+    margin-top: 20px;
+}
+
 .taskInfo p {
     max-width: 632px;
     font-family: 'inter', sans-serif;
@@ -32,3 +36,8 @@
    color: var(--color-danger);
 
 }
+
+.customRadio {
+  border-radius: 10px;
+}
+

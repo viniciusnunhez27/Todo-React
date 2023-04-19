@@ -1,4 +1,7 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import { Header } from "./components/Header";
+import { Task } from "./components/Task";
 
 import styles from "./App.module.css";
 
@@ -6,7 +9,31 @@ import Plus from "./assets/Plus.svg";
 import IconEmpty from './assets/Iconempty.svg'
 
 import "./global.css";
-import { Task } from "./components/Task";
+
+
+
+const tasks = [
+
+  {
+  id:uuidv4 (),
+  title:'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+  isComplete:false
+  },
+  
+ {
+  id:uuidv4(),
+  title:'Estudar Javascript',
+  isComplete:true
+  },
+
+ {
+  id:uuidv4(),
+  title:'Estudar React',
+  isComplete:false
+  }
+]
+
+
 
 function App() {
   return (
@@ -37,7 +64,8 @@ function App() {
      </div>
    </div>
 
-    <Task />
+   <Task />
+
     </>
 
 

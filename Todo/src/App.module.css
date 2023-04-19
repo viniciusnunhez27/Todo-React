@@ -104,6 +104,12 @@
     color: var(--color-gray-300);
   } 
 
-  
+/*
+
+  .cardInfo {
+    visibility: hidden;
+    height: 0;
+  }
+*/
 
 
