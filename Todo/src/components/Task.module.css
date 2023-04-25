@@ -11,6 +11,20 @@
     border-radius: 8px;
 }
 
+.taskInfoChecked {
+    width: 100%;
+    max-width: 738px;
+    margin: 0px  auto;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-gray-500);
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: line-through;
+}
+
 .taskInfo + .taskInfo {
     margin-top: 20px;
 }
@@ -22,7 +36,8 @@
     font-weight: 600;
     line-height: 19.6px;
     color: var(--color-gray-100);
-}
+    color: var(--color-gray-100);
+  }
 
 .taskInfo button {
     background: transparent;
@@ -37,7 +52,4 @@
 
 }
 
-.customRadio {
-  border-radius: 10px;
-}
 

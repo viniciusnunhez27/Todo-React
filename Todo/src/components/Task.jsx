@@ -1,14 +1,15 @@
 import styles from  './Task.module.css';
-import { Trash } from '@phosphor-icons/react' 
+import { Check, Trash } from '@phosphor-icons/react' 
 
-export function Task () {
+export function Task ({ title, isChecked } ) {
     return (
-     <div className={styles.taskInfo}>
-        <input type="checkbox"  /> 
-        <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+     <div className={styles.taskInfo} >
+        <input type="checkbox"/> 
+        <p>{title}</p>
       <button> 
           <Trash  size={24}/>
         </button>
       </div>
     )
 } 
+

@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { Header } from "./components/Header";
 import { Task } from "./components/Task";
+import { useState } from 'react';
 
 import styles from "./App.module.css";
 
@@ -11,39 +12,62 @@ import IconEmpty from './assets/Iconempty.svg'
 import "./global.css";
 
 
+export function App() {
 
-const tasks = [
-
+ const [newtask, setNewTask] = useState ([
+ 
   {
-  id:uuidv4 (),
-  title:'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
-  isComplete:false
-  },
-  
+    id:uuidv4 (),
+    title:'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+    isComplete:false
+   },
+  {
+   id:uuidv4(),
+   title:'Estudar Javascript',
+   isComplete:true
+ },
  {
-  id:uuidv4(),
-  title:'Estudar Javascript',
-  isComplete:true
-  },
-
- {
-  id:uuidv4(),
-  title:'Estudar React',
-  isComplete:false
+   id:uuidv4(),
+   title:'Estudar React',
+   isComplete:false
   }
-]
 
 
+]) 
 
-function App() {
+const [newTextTask, setNewTextTask] = useState('')
+
+
+function handleCreateNewTask() {
+     event.preventDefault()
+
+     const newTaskText = event.target.text.value
+
+     setNewTask([...newtask, newTextTask])
+
+     setNewTextTask('')
+  } 
+
+ function handleNewTextChange () {
+  setNewTextTask(event.target.value)
+ } 
+
+  
   return (
     <>
   
   <div className={styles.container}>
       <Header />
 
-      <form className={styles.taskbar}>
-        <textarea placeholder="Adicione uma nova tarefa" />
+      <form  onSubmit={handleCreateNewTask} className={styles.taskbar}>
+       
+       <textarea 
+        name='text'
+        placeholder="Adicione uma nova tarefa" 
+        onChange={handleNewTextChange}
+        value={newTextTask}
+        />
+       
         <button>
           Criar <img src={Plus} alt="Icone de +" />
         </button>
@@ -64,7 +88,16 @@ function App() {
      </div>
    </div>
 
-   <Task />
+  {newtask.map( task => {
+    return (
+      <Task 
+      key={task.id}
+      title={task.title}
+      isChecked={task.isComplete}
+
+      />
+    )
+  })} 
 
     </>
 
