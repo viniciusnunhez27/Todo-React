@@ -18,7 +18,7 @@ export function App() {
     {
       id: uuidv4(),
       title: 'Estudar Javascript',
-      isComplete: true
+      isComplete:true
     },
     {
       id: uuidv4(),
@@ -31,6 +31,7 @@ export function App() {
     setNewTask(e.target.value);
   };
 
+
   function handleCreateNewTask(e) {
     e.preventDefault();
     setTasks([
@@ -38,11 +39,19 @@ export function App() {
       {
         id: uuidv4(),
         title: newTask,
-        isComplete: false
+        isComplete:false,
       }
     ]);
     setNewTask('');
   };
+
+
+  function deleteTask(tasksToDelete) {
+    const newTaskWithoutDeleteOne = tasks.filter((task) => task.id !== tasksToDelete);
+    setTasks(newTaskWithoutDeleteOne);
+  }
+
+
   return (
     <div className={styles.container}>
       <Header />
@@ -76,11 +85,14 @@ export function App() {
         </div>
       </div>
 
-      {tasks.map(task => (
+      {tasks.map((task) => (
         <Task
           key={task.id}
+          id={task.id}
           title={task.title}
           isChecked={task.isComplete}
+          onDeleteTask={deleteTask}
+
         />
       ))}
     </div>
