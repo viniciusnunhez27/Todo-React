@@ -10,8 +10,6 @@ export function Header() {
       <header>
         <img src={Logo} alt="Logotipo" />
       </header>
-
-    
     </>
   );
 }

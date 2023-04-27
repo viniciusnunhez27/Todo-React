@@ -45,6 +45,11 @@ export function App() {
     setNewTask('');
   };
 
+function  handleNewTaskInvalid(e){
+  e.target.setCustomValidity("Este campo é obrigatório!")
+
+} 
+
 
   function deleteTask(tasksToDelete) {
     const newTaskWithoutDeleteOne = tasks.filter((task) => task.id !== tasksToDelete);
@@ -62,6 +67,8 @@ export function App() {
           placeholder="Adicione uma nova tarefa"
           onChange={handleInputChange}
           value={newTask}
+          onInvalid={handleNewTaskInvalid}
+          required
         />
         <button>
           Criar <img src={Plus} alt="Icone de +" />
